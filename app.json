@@ -1,8 +1,7 @@
 {
   "expo": {
-    "name": "Recipe_app",
-    "slug": "recipe_app",
-    "scheme": "recipe_app",
+    "name": "DoneWithIt2.0",
+    "slug": "DoneWithIt2.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,9 +11,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
       "supportsTablet": true
     },
@@ -25,10 +21,7 @@
       }
     },
     "web": {
-      "bundler": "metro"
-    },
-    "plugins": [
-      "expo-router"
-    ]
+      "favicon": "./assets/favicon.png"
+    }
   }
 }

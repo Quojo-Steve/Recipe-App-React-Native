@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import { Image, Text, View } from "react-native";
-import { Link, useNavigation } from "expo-router";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -12,10 +11,9 @@ import {
 } from "react-native-responsive-screen";
 import { useEffect } from "react";
 
-export default function App() {
+export default function Welcome(props) {
   const ring1padding = useSharedValue(0);
   const ring2padding = useSharedValue(0);
-  const navigation = useNavigation();
   useEffect(() => {
     ring1padding.value = 0;
     ring2padding.value = 0;
@@ -24,7 +22,7 @@ export default function App() {
       ring2padding.value = withSpring(ring2padding.value + hp(5.5));
     }, 100);
 
-    setTimeout(() => navigation.navigate("homeScreen"), 2500);
+    setTimeout(() => props.navigation.navigate("home"), 2500);
   }, []);
 
   const ring1Style = useAnimatedStyle(() => {

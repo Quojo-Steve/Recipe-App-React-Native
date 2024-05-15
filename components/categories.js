@@ -30,7 +30,7 @@ export default function Categories({
               onPress={() => handleChangeCategory(cat.strCategory)}
             >
               <View className={"rounded-full p-[6px] " + activeButtonClass}>
-                 {/* <Image
+                {/* <Image
                   source={{ uri: cat.strCategoryThumb }}
                   style={{ width: hp(6), height: hp(6) }}
                   className="rounded-full"
@@ -38,7 +38,7 @@ export default function Categories({
 
                 <CachedImage
                   uri={cat.strCategoryThumb}
-                  style={{ width: hp(6), height: hp(6) }}
+                  style={{ width: hp(6), height: hp(6), borderRadius: 20 }}
                   className="rounded-full"
                 />
               </View>

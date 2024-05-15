@@ -15,8 +15,8 @@ import {
 } from "react-native-responsive-screen";
 import { BellIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import axios from "axios";
-import Categories from "../components/categories";
-import Recipes from "../components/recipes";
+import Categories from "./categories";
+import Recipes from "./recipes";
 
 const HomeScreen = () => {
   const [activeCategory, setActiveCategory] = useState("Beef");
