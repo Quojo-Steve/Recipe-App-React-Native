@@ -22,11 +22,21 @@ const HomeScreen = () => {
   const [activeCategory, setActiveCategory] = useState("Beef");
   const [categories, setCategories] = useState([]);
   const [meals, setMeals] = useState([]);
+  // const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     getCategories();
     getRecipes();
   }, []);
+
+  // const handleSearchChange = (query) => {
+  //   setSearchQuery(query);
+  //   if (query.length >= 3) {
+  //     getRecipes(query);
+  //   } else if (query.length === 0) {
+  //     getRecipes(activeCategory);
+  //   }
+  // };
 
   const handleChangeCategory = (category) => {
     getRecipes(category);
@@ -46,6 +56,24 @@ const HomeScreen = () => {
       console.log("error:", err.message);
     }
   };
+
+  // Search function giving issues
+  // const getRecipes = async (query = "") => {
+  //   try {
+  //     const endpoint = query
+  //       ? `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
+  //       : `https://www.themealdb.com/api/json/v1/1/filter.php?c=${activeCategory}`;
+  //     const response = await axios.get(endpoint);
+  //     if (response && response.data && response.data.meals) {
+  //       setMeals(response.data.meals);
+  //     } else {
+  //       setMeals([]);
+  //     }
+  //   } catch (err) {
+  //     console.log("error:", err.message);
+  //     setMeals([]);
+  //   }
+  // };
 
   const getRecipes = async (category = "Beef") => {
     try {
@@ -105,6 +133,7 @@ const HomeScreen = () => {
             placeholderTextColor={"gray"}
             style={{ fontSize: hp(1.7) }}
             className="flex-1 text-base mb-1 pl-3 tracking-wider"
+            // onChangeText={handleSearchChange}
           />
           <View className="bg-white rounded-full p-3">
             <MagnifyingGlassIcon size={hp(2.5)} strokeWidth={3} color="gray" />

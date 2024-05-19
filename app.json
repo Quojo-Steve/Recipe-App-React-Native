@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "DoneWithIt2.0",
-    "slug": "DoneWithIt2.0",
+    "name": "RecipeApp",
+    "slug": "RecipeApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
